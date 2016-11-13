@@ -1,10 +1,28 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>ebt</title>
+    <title>ebt labs</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <img src="logo.png">
+    <div id="particles"></div>
+
+    <header>
+        <img src="logo.png">
+    </header>
+
+    <article>
+        <p>Since 2012 <em>ebt labs</em> has been offering high-quality website design, software development, and technical consultation at competitive prices.</p>
+    </article>
+
+    <script src="particles.min.js"></script>
+    <script>
+        particlesJS.load('particles', 'particles.json', function() {
+            console.log('callback - particles.js config loaded');
+        });
+    </script>
 </body>
+
 </html>

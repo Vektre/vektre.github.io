@@ -3,15 +3,34 @@
     padding: 0;
     box-sizing: border-box;
 }
-html, body {
+html,
+body {
     height: 100%;
 }
 body {
+    background: white;
+}
+#particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+header {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 img {
-    width: 320px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+article {
+    margin-top: 100vh;
+    background: white;
 }
