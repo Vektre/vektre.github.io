@@ -2,25 +2,90 @@
 <html>
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff">
     <title>ebt labs</title>
+    <meta name="description" content="Music, robots, and other things.">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
 <body>
     <div id="particles"></div>
 
     <header>
-        <img src="logo.png">
+        <img src="img/logo.png">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#work">Our Work</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
     </header>
 
     <article>
-        <p>Since 2012 <em>ebt labs</em> has been offering high-quality website design, software development, and technical consultation at competitive prices.</p>
+        <p>Since 2012 <em>ebt labs</em> has been offering high-quality website design, software development, and technical consultation at competitive prices. Whether you're an individual, a small business, or a large corporation, ebt is ready to service your needs; drawing on our years of experience with hardware support, application development, web design/development, and countless other fields.</p>
+        <section name="work" id="work">
+            <h2>Our Work</h2>
+            <!-- TODO: Make each of these lead to an external "project page" with more information. -->
+            <ul class="work-grid">
+                <li>
+                    <div>
+                        <a href="http://english-now.com/">
+                            <h3>English Now!</h3>
+                            <p>We helped to develop a clean new website for English Now!, a small English school in Bethesda, Maryland.</p>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <a href="https://github.com/ErikBoesen/haiku">
+                            <h3>Haiku</h3>
+                            <p>We designed a simplistic WordPress theme from the ground up; helping bloggers keep their blogs clean yet usable.</p>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <a href="https://erikboesen.github.io/Comoros">
+                            <h3>Comoros</h3>
+                            <p>We created a beautiful website template to demonstrate our offerings. If you'd like us to use this theme in your next website, we can make that happen.</p>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <a href="https://chrome.google.com/webstore/detail/bwnt-new-tab/doiinciigjmmlnbehjjjkeoamihggkba">
+                            <h3>BWNT</h3>
+                            <p>A beautiful, minimalistic, customizable New Tab Page for Chrome.</p>
+                        </a>
+                    </div>
+                </li>
+            </li>
+        </section>
+        <section name="contact" id="contact">
+            <h2>Contact Us</h2>
+            <p>If you're interested in hiring us, curious about careers, or just want to chat, please don't hesitate to email us <a href="mailto:meATSYMBOLerikboesenPERIODcom">here</a>!</p>
+        </section>
     </article>
-
+    <footer>
+        <p>Copyright &copy; 2016 ebt labs. All rights reserved.</p>
+    </footer>
     <script src="particles.min.js"></script>
     <script>
+        // Generate a list of all links on the page.
+        var links = document.getElementsByTagName('a');
+        // Go through all the links
+        for (i = 0; i < links.length; i++) {
+            // If any of them contain instances of "ATSYMBOL" or "PERIOD" replace them as appropriate.
+            links[i].href = links[i].href.replace(/ATSYMBOL/, '@').replace(/PERIOD/, '.');
+        }
+
+        // Initialize particle background in header.
         particlesJS.load('particles', 'particles.json', function() {
-            console.log('callback - particles.js config loaded');
+            console.log('particles.js config loaded.');
         });
     </script>
 </body>
